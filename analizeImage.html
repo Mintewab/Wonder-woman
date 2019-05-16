@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Identifer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="game.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Analize Image</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="analizeImage.html">Analize Image</a></li>
+                    <li><a href="game.html">Play Game</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="jumbotron" style="background-color: rgba(105, 126, 124, 0.74); color: white ">
+            <div>
+    
+                <h1>Analyze image:</h1>
+                Enter the URL to an image, then click the <strong>Analyze image</strong> button.
+                <br><br>
+                Image to analyze:
+                <input type="text" name="inputImage" id="inputImage"
+                    value="https://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg" />
+                <button id="analyzeImg">Analyze image</button>
+                <br><br>
+                <div id="wrapper" style="width:1020px; display:table;">
+                    <div id="jsonOutput" style="width:600px; display:table-cell;">
+                        <!-- Response: -->
+                        <br><br>
+                        <!-- <textarea id="responseTextArea" class="UIInput" style="width:580px; height:400px;"></textarea> -->
+                    </div>
+                    <div id="imageDiv" style="width:420px; display:table-cell;">
+                        Source image:
+                        <br><br>
+                        <img id="sourceImage" width="400" />
+                        <div id="description"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+</html>
