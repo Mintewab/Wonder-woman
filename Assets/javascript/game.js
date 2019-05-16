@@ -14,15 +14,18 @@ function GameQuestionAnswer(questionImgUrl, answer, options) {
 }
 var imgUrlList = [
     'https://expatorama.files.wordpress.com/2015/04/img_4215-1.jpg',
-    'http://www.visittnt.com/blog/wp-content/uploads/2016/06/o-TAJ-MAHAL-facebook.jpg'
+    'http://www.visittnt.com/blog/wp-content/uploads/2016/06/o-TAJ-MAHAL-facebook.jpg',
+    'http://www.vigoenfotos.com/paris/imagenes/paris/notre_dame/g_vigoenfotos_3404p.jpg',
 ];
 var imgUrlIndex = 0;
 var analyzedData;
+var currentImageQuest;
+
 // making an api call to microsoft computer vision API 
 function processRemoteImage(imgUrl) {
     var subscriptionKey = subKey.key;
     console.log("subscriptionKey : " + subscriptionKey);
-    console.log("imgUrl : " + imgUrl);
+    //console.log("imgUrl : " + imgUrl);
     var landmark;
     var description;
 
@@ -105,7 +108,9 @@ $(function () {
     console.log('hi');
     //handling the click event of analyeImg button
     $('#analyzeImg').click(function () {
-        var sourceImageUrl = $("$inputImage").value;
+        var sourceImageUrl = $("#inputImage").val();
+
+        document.querySelector("#sourceImage").src = sourceImageUrl;
 
         //invoke the processRemoteImage function
         processRemoteImage(sourceImageUrl);
@@ -118,6 +123,7 @@ $(function () {
             $("#description").text('Description: ' + analyzedData.description);
         }, 3000);
     });
+
     //handling click event for start game button
     $('.startGame-child').on('click', function () {
         $('#mainDiv').hide();
@@ -131,11 +137,21 @@ $(function () {
         //sending a request to the api for the current image
         processRemoteImage(currentImgUrl);
 
+        // waiting 3 seconds for the api call to finish
         setTimeout(function () {
-            var currentImageQuest = new GameQuestionAnswer(currentImgUrl, analyzedData.landmark);
+            currentImageQuest = new GameQuestionAnswer(currentImgUrl, analyzedData.landmark);
             document.querySelector("#currentImage").src = currentImageQuest.questionImgUrl;
         }, 3000);
 
+        // waiting 3 seconds to show the answer, which is temporary
+        setTimeout(function () {
+            $('.scoreChoice').html(currentImageQuest.answer);
+        }, 3000);
+
+
+
+
+        
     })
 })
 
