@@ -1,5 +1,8 @@
-<<<<<<< Updated upstream
+
 # Wonder-woman
-=======
 # Wonder-woman
->>>>>>> Stashed changes
+# Wonder-woman
+zia made a change
+mini chagned this
+mini made another change
+zia another change
