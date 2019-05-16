@@ -2,7 +2,12 @@ body {
     font: 15px/1.5 Arial, Helvetica, sans-sarif;
     padding: 0;
     margin: 0;
-    background-image: url("../images/nightsKing.png");
+    background-image: url("../images/ai4.jpg");
     background-repeat: no-repeat;
     background-size: cover;   
+}
+#startGameButton {
+    background-image: url("../images/Play-Game.jpg");
+    width: 480px;
+    height: 80px
 }

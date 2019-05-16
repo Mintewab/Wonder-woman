@@ -110,3 +110,31 @@ $(function () {
         }, 2000);
     });
 })
+
+// Timer function
+var timeLeft = 20;
+var runrun;
+
+function loseTime() {
+
+    timeLeft--;
+
+    document.getElementById("displayTimeLeft").innerHTML = timeLeft;
+
+    if (timeLeft < 1) { gameOver(); }
+}
+
+function gameLoad() {
+
+    document.getElementById("startWrapper").style.display = "none";
+    document.getElementById("gameWrapper").style.display = "block";
+
+    runrun = setInterval(function () { loseTime(); }, 1000);
+}
+function gameOver() {
+
+    clearInterval(runrun);
+    document.getElementById("displayTimeLeft").innerHTML = "Loser!";
+
+    document.getElementById("gameWrapper").innerHTML = t;
+}
