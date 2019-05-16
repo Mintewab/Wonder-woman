@@ -2,10 +2,9 @@ body {
     font: 15px/1.5 Arial, Helvetica, sans-sarif;
     padding: 0;
     margin: 0;
-    background-image: url("./images/nightsKing.png");
+    background-image: url("../images/Z52FOz.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;  
 }
 
 .container {
@@ -15,11 +14,11 @@ body {
 }
 
 header {
-    background: rgba(5, 48, 51, 0.74);
+    background: rgba(0, 6, 7, 0.76);
     color: white;
     padding-top: 20px;
     min-height: 40px;
-    border-bottom: aqua 3px solid;
+    /* border-bottom: aqua 3px solid; */
 }
 
 header a {
@@ -41,9 +40,12 @@ header li {
 }
 
 .jumbotron {
-    height: 780px;
-    margin-top: 30px;
+    height: 700px;
+    margin-top: 40px;
+    margin-left: 350px;
+    margin-right: 350px;
     text-align: center;
+    background-color: black; 
 }
 
 #mainDiv {
@@ -73,7 +75,7 @@ header li {
 .startGame-child {
     /* border: 1px solid black; */
     padding: 10px;
-    color: black;
+    color: white;
     justify-items: center;
     align-items: center;
     text-align: center;
@@ -81,13 +83,13 @@ header li {
 }
 
 #startGameBtn {
-    background-color: green;
+    background-color: #236d3580;
     font-size: 30px;
     border-radius: 30px;
 }
 
 #startGameBtn:hover {
-    background-color: green;
+    background-color: #236d35da;
     transform: scale(1.25);
     font-size: 40px;
     border-radius: 50px;
