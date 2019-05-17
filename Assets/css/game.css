@@ -2,7 +2,7 @@ body {
     font: 15px/1.5 Arial, Helvetica, sans-sarif;
     padding: 0;
     margin: 0;
-    background-image: url("../images/nightsKing.png");
+    background-image: url("../images/ai1.jpg");
     background-repeat: no-repeat;
     background-size: cover;   
 }
@@ -20,6 +20,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;  
 }
+
 .imageRow-child{
     border: 1px solid black;
 }
@@ -30,4 +31,18 @@ body {
 }
 .scoreChoice{
     border: 1px solid black; 
+}
+.questId-child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.prevNext{
+    border: 1px solid black;
+}
+
+#currentImage{
+    height: 568px;
+    width: 788px;
+    padding: 20px;
+    border-radius: 31px;
 }
