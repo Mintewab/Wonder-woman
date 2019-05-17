@@ -6,8 +6,28 @@ body {
     background-repeat: no-repeat;
     background-size: cover;   
 }
-#startGameButton {
-    background-image: url("../images/Play-Game.jpg");
-    width: 480px;
-    height: 80px
+#questId {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    display: none;
+}
+.questId-child{
+    background-color: wheat;
+    border: 1px solid black;
+}
+#imageRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+}
+.imageRow-child{
+    border: 1px solid black;
+}
+#scoreDiv{
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    border: 1px solid black;
+}
+.scoreChoice{
+    border: 1px solid black; 
 }
