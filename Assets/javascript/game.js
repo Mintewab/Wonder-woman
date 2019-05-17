@@ -12,11 +12,7 @@ function GameQuestionAnswer(questionImgUrl, answer, options) {
     this.answer = answer;
     this.options = options;
 }
-var presidentUrlList = [
-    'https://tse2.mm.bing.net/th?id=OIP.STWdg623tfIdcwNSfaMvbAHaE8&pid=Api&P=0&w=259&h=174',
-    'https://i.dailymail.co.uk/i/pix/2017/05/14/15/404D44A500000578-4504038-New_French_President_Emmanuel_Macron_delivers_a_speech_during_hi-a-76_1494770439904.jpg',
 
-] 
 var imgUrlIndex = 0;
 var analyzedData;
 var currentImageQuest;
