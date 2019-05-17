@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="./Assets/css/style.css">
     <link rel="stylesheet" href="./Assets/css/game.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="./Assets/javascript/config.js"></script>
     <script src="./Assets/javascript/game.js"></script>
 </head>
 
@@ -22,25 +23,43 @@
             </nav>
         </div>
     </header>
-    <section>
-        <div id="mainDiv">
-
-            <div id="gameDescription">
-                    Why do we use it?
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </div>
-
-            <div id="startGame">
-                <div class="startGame-child"></div>
-                <div class="startGame-child" id="startGameBtn">
-                    <h1>START GAME</h1> 
-                </div>
-                <div class="startGame-child"></div>
-                
-            </div>
-
+    <div id="mainDiv">
+        <div id="gameDescription">
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
         </div>
-    </section>
+        <div id="startGame">
+            <div class="startGame-child"></div>
+            <div class="startGame-child" id="startGameBtn">
+                <h1>START GAME</h1>
+            </div>
+            <div class="startGame-child"></div>
+        </div>
+    </div>
+    <div id="questId">
+        <div class="questId-child"> timer </div>
+        <div class="questId-child" id="imageRow">
+            <div class="imageRow-child" id="imageDiv">
+                <img id="currentImage" src="" alt="" width="400px" height="300px">
+            </div>
+            <div class="imageRow-child" id="scoreDiv">
+                <div class="scoreChoice">
+                    choice
+                </div>
+                <div class="scoreChoice">
+                    score
+                </div>
+            </div>
+        </div>
+        <div class="questId-child">
+            <div><i class="fas fa-backward"></i>prev</div>
+        </div>
+    </div>
 </body>
 
 </html>
