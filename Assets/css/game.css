@@ -46,3 +46,44 @@ body {
     padding: 20px;
     border-radius: 31px;
 }
+
+
+#gameDescription {
+    display: grid;
+    color: black;
+    font-size: 30px;
+    padding: 20px;
+    background-color: wheat;
+    border-radius: 20px;
+}
+
+#startGame {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    border-radius: 20px;
+    grid-column-gap: 10px;
+}
+
+.startGame-child {
+    padding: 10px;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+.startGame-child {
+    background-color: #236d3580;
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.startGame-child:hover {
+    background-color: #236d35da;
+    transform: scale(1.25);
+    font-size: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+}

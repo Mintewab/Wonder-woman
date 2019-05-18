@@ -3,19 +3,14 @@
     grid-template-rows: 1fr 5fr 2fr;
 }
 
-.mainDivChild {
-    /* background-color: wheat;
-    border: 1px solid black; */
-}
+
 
 #landmarkImg {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    /* grid-template-columns: 1.5fr 1fr; */
 }
 
 .landmarkImgChild {
-    /* background-color: wheat;
-    border: 1px solid black; */
     justify-content: center;
     justify-items: center;
 }

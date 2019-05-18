@@ -27,6 +27,14 @@ $(function () {
 
 $("#play").click(gameLoad);
 
+$("#nextQ").on('click', function() {
+    console.log("next is clicked")
+    if(randomIndex < randomResponseResult.length){
+        randomIndex++;
+        gameLoad();
+    }
+});
+
 function gameLoad() {
     // hiding the button
     $("#play").hide();
@@ -42,11 +50,15 @@ function gameLoad() {
 
     currentRandomIncorrect = randomResponseResult[randomIndex].incorrect_answers;
     console.log("currentRandomIncorrect: " + currentRandomIncorrect);
+    currentRandomIncorrect.push(currentRandomCorrect);
 
     $("#question").text(currentRandomQuestion);
     $("#category").text(currentCategory);
-    $("#options").text(currentRandomIncorrect);
-    
+
+    for(var i = 0; i<currentRandomIncorrect.length; i++) {
+        var liValue = currentRandomIncorrect[i];
+        $("#options").append('<li class="optionList"><h2>' + liValue + '</h2></li>');
+    }  
 
     runrun = setInterval(function () {
         loseTime();
@@ -62,19 +74,4 @@ function loseTime() {
 function gameOver() {
     clearInterval(runrun);
     $("#answer").text(currentRandomCorrect);
-
-    setTimeout(function () {
-        if (urlIndex < imgUrlList.length) {
-            randomIndex++;
-
-            currentCategory = randomResponseResult[randomIndex].category;
-            
-            $('#answer').empty();
-            playCurrentImg(currentImgUrl);
-            timeLeft = 10;
-            runrun = setInterval(function () {
-                loseTime();
-            }, 1000);
-        }
-    }, 3000)
 }
