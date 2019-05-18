@@ -21,7 +21,7 @@ var currentImageQuest;
 function processRemoteImage(imgUrl) {
     var subscriptionKey = subKey.key;
     console.log("subscriptionKey : " + subscriptionKey);
-    //console.log("imgUrl : " + imgUrl);
+
     var landmark;
     var description;
 
@@ -44,11 +44,6 @@ function processRemoteImage(imgUrl) {
         "language": "en",
     };
 
-    // Display the image.
-    // var sourceImageUrl = document.getElementById("inputImage").value;
-    //var sourceImageUrl = imgUrl;
-    //document.querySelector("#sourceImage").src = imgUrl;
-
     // Make the REST API call.
     $.ajax({
         url: uriBase + "?" + $.param(params),
@@ -66,28 +61,22 @@ function processRemoteImage(imgUrl) {
         data: '{"url": ' + '"' + imgUrl + '"}',
     })
         .done(function (data) {
-            // Show formatted JSON on webpage.
-            //$("#responseTextArea").val(JSON.stringify(data, null, 2));
-
+            console.log(data);
             if (data.description.captions.length > 0) {
                 description = data.description.captions[0].text;
-                //$("#description").html(description);
             }
             var landmarks = data.categories[0].detail.landmarks;
             console.log(landmarks);
             if (landmarks !== undefined && landmarks.length > 0) {
                 landmark = landmarks[0].name;
             }
-            //debugger
-            // console.log('landmarks: ' + landmarks);
-            // console.log('landmark :' + landmark);
-            // console.log('description : ' + description);
+
+            console.log('landmark :' + landmark);
+            console.log('description : ' + description);
 
             //creating an instance of ResponseModel
             analyzedData = new ResponseModel(landmark, description);
-            // console.log(analyzedData);
-            //returning the ResponseModel instance
-            //return analyzedData;
+            console.log(analyzedData);
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             // Display error message.
@@ -95,24 +84,25 @@ function processRemoteImage(imgUrl) {
                 errorThrown + " (" + jqXHR.status + "): ";
             errorString += (jqXHR.responseText === "") ? "" :
                 jQuery.parseJSON(jqXHR.responseText).message;
+                
             alert(errorString);
         });
 };
 
 /** UI logic area **/
-$(function () {
-    console.log('hi');
+$(document).ready(function () {
     //handling the click event of analyeImg button
     $('#analyzeImg').click(function () {
         var sourceImageUrl = $("#inputImage").val();
 
+        // desplaying the image
         document.querySelector("#sourceImage").src = sourceImageUrl;
 
         //invoke the processRemoteImage function
         processRemoteImage(sourceImageUrl);
+
         //wait for two seconds until the API call is completes
         setTimeout(function () {
-            //console.log(analyzedData.landmark);
             //rendering the landmark of the image the API gives
             $("#landmark").text('Landmark: ' + analyzedData.landmark);
             //rendering the description of the image the API gives
@@ -143,11 +133,6 @@ $(function () {
         setTimeout(function () {
             $('.scoreChoice').html(currentImageQuest.answer);
         }, 9000);
-
-
-
-
-        
     })
 })
 
