@@ -12,28 +12,7 @@ function GameQuestionAnswer(questionImgUrl, answer, options) {
     this.answer = answer;
     this.options = options;
 }
-var imgUrlList = [
-    'http://designlike.com/wp-content/uploads/2011/12/Sagradafamilia00002482731-600x823.jpg',
-    'https://cdn-images-1.medium.com/max/1600/0*89meqThuTSM7L0fL.jpg',
-    'http://zee4u.files.wordpress.com/2011/03/petronis.jpg',
-    'http://www.therichest.com/wp-content/uploads/5th.jpg',
-    'https://oddstuffmagazine.com/wp-content/uploads/2012/04/1294.jpg',
-    'https://s-media-cache-ak0.pinimg.com/736x/97/e6/6e/97e66e7cef48a4ebe73a113c31f373b5.jpg',
-    'https://explorerspassage.com/wp-content/uploads/2016/11/Bridge.jpg',
-    'http://www.bankableinsight.com/wp-content/uploads/2015/08/5389424262_af666a6f45_z.jpg',
-    'https://3.bp.blogspot.com/-I-UYJWhrchA/Urs5pxZ1pZI/AAAAAAAAAvs/uKfQkJ7vyOM/s1600/bell-rock-in-sedona-306656hvvvvvv.jpg',
-    'https://expatorama.files.wordpress.com/2015/04/img_4215-1.jpg',
-    'http://www.visittnt.com/blog/wp-content/uploads/2016/06/o-TAJ-MAHAL-facebook.jpg',
-    'http://www.vigoenfotos.com/paris/imagenes/paris/notre_dame/g_vigoenfotos_3404p.jpg',
-    'https://www.casino.org/news/wp-content/uploads/2014/10/Tokyo-2020-Olympics-casino.jpg',
-    'http://1.bp.blogspot.com/-fpl8BSpcznM/T_qcidqZwxI/AAAAAAAARmg/ZYx-PvO_vqk/s1600/Italy+2.jpg',
-    'http://1.bp.blogspot.com/_I7rL3-gcB4Q/TJ266zh5bfI/AAAAAAAAAAw/6KNtm7ha9-M/s1600/76363-050-9741E61E.jpg',
-];
-var presidentUrlList = [
-    'https://tse2.mm.bing.net/th?id=OIP.STWdg623tfIdcwNSfaMvbAHaE8&pid=Api&P=0&w=259&h=174',
-    'https://i.dailymail.co.uk/i/pix/2017/05/14/15/404D44A500000578-4504038-New_French_President_Emmanuel_Macron_delivers_a_speech_during_hi-a-76_1494770439904.jpg',
 
-] 
 var imgUrlIndex = 0;
 var analyzedData;
 var currentImageQuest;
