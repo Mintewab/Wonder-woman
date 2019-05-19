@@ -9,25 +9,46 @@ When the TV goes to sleep it displays random pictures of places. The TV provided
 ## Description:
 Our application allows users to upload any image, and then quickly see a description of that image by using the Microsft Cognitive Service Computer Vision API. The site has also a game powered by the same API.
  
+##Architectural Design 
+
+#Image Analyzer
+We built an app using the Microsft Cognitive Service Computer Vision API to retrieve details about an image. 
+Now, the image will be identified by the API, and its details displayed. 
+
+#The Smart Game
+We also added a game feature, to provide socializing experience.
+Opentdb API is also used to generate random questions. 
+ 
 ## Results:
 We built an app using the  Microsft Cognitive Service Computer Vision API API and an uploader, and the other DotDot API to retrieve details about an image that was uploaded.  Now, an image can be uploaded to the app, and it displays details. We also added a game feature, to provide the experience without the TV.
 
 ## Technologies Used
-
-* Booststrap
-* p5.js
-* jQuery .....
+Microsoft Computer Vision API
+Open Trivia Database API
+HTML, CSS, Booststrap
+Java Scriot
+p5.js
+jQuery 
+jQuery ajax
 
 ## Known bugs
-* slslslslsll
+* The p5.js is currently is not playing the background sound for the game.
+(propably a problem with the p5.js CDN)
 
 ## Team Effort:
-
-## Individual Responsibilities:
-
+As a team we discussed and decide together on:
+The website design and content
+API selection
 
 ## Challenges:
 
-Improvements: 1) Larger selection of pictures in game. 2) Improve formatting (give specific examples)
+Finding an API that would give us list of cities near places which is why we changed the format of the game we originally wanted to create.
+Collaborating with git
+Resolving conflict
 
-## License
+##Improvements
+Larger selection of pictures in game. 
+Improve formatting (give specific examples)
+Make the background sound to work again
+
+
